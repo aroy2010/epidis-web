@@ -15,7 +15,6 @@ content:
       - name: author
         label: Autor
         type: string
-        default: Adriel Olórtegui Yzú
       - name: categories
         label: Categorías
         type: list
@@ -25,9 +24,6 @@ content:
       - name: summary
         label: Resumen
         type: text
-      - name: featured_image
-        label: Imagen destacada
-        type: image
       - name: body
         label: Contenido
         type: rich-text
@@ -46,42 +42,19 @@ content:
       - name: anio
         label: Año del análisis
         type: number
-      - name: imagen
-        label: Imagen/Gráfico
-        type: image
-      - name: description
-        label: Descripción
-        type: rich-text
       - name: body
-        label: Datos/Visualización
+        label: Contenido
         type: rich-text
 
   pages:
     name: Páginas
     path: content
     type: collection
-    filters:
-      type: page
+    exclude: [posts, estadisticas]
     fields:
       - name: title
         label: Título
         type: string
-      - name: type
-        label: Tipo
-        type: string
-        default: page
-        hidden: true
-      - name: menu
-        label: Menú
-        type: string
-        options:
-          - main
-          - footer
-          - ''
-      - name: weight
-        label: Peso en menú
-        type: number
-        default: 10
       - name: body
         label: Contenido
         type: rich-text
