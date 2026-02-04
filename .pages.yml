@@ -1,0 +1,87 @@
+media: static/images/uploads
+
+content:
+  posts:
+    name: Posts
+    path: content/posts
+    type: collection
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: date
+        label: Fecha
+        type: date
+      - name: author
+        label: Autor
+        type: string
+        default: Adriel Olórtegui Yzú
+      - name: categories
+        label: Categorías
+        type: list
+      - name: tags
+        label: Etiquetas
+        type: list
+      - name: summary
+        label: Resumen
+        type: text
+      - name: featured_image
+        label: Imagen destacada
+        type: image
+      - name: body
+        label: Contenido
+        type: rich-text
+
+  estadisticas:
+    name: Estadísticas Sanitarias
+    path: content/estadisticas
+    type: collection
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: fuente
+        label: Fuente de datos
+        type: string
+      - name: anio
+        label: Año del análisis
+        type: number
+      - name: imagen
+        label: Imagen/Gráfico
+        type: image
+      - name: description
+        label: Descripción
+        type: rich-text
+      - name: body
+        label: Datos/Visualización
+        type: rich-text
+
+  pages:
+    name: Páginas
+    path: content
+    type: collection
+    filters:
+      type: page
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: type
+        label: Tipo
+        type: string
+        default: page
+        hidden: true
+      - name: menu
+        label: Menú
+        type: string
+        options:
+          - main
+          - footer
+          - ''
+      - name: weight
+        label: Peso en menú
+        type: number
+        default: 10
+      - name: body
+        label: Contenido
+        type: rich-text
