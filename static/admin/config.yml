@@ -2,6 +2,7 @@ backend:
   name: github
   repo: aroy2010/epidis-web
   branch: main
+  base_url: https://epidis.netlify.app
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
