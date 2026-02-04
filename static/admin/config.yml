@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Publicaciones"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Autor", name: "author", widget: "string", default: "Adriel Olórtegui Yzú"}
+      - {label: "Categorías", name: "categories", widget: "list", default: ["Epidemiología"]}
+      - {label: "Etiquetas", name: "tags", widget: "list", default: []}
+      - {label: "Resumen", name: "summary", widget: "text"}
+      - {label: "Imagen destacada", name: "featured_image", widget: "image", required: false}
+      - {label: "Contenido", name: "body", widget: "markdown"}
+  
+  - name: "estadisticas"
+    label: "Estadísticas Sanitarias"
+    folder: "content/estadisticas"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fuente de datos", name: "fuente", widget: "string"}
+      - {label: "Año del análisis", name: "anio", widget: "number"}
+      - {label: "Imagen/Gráfico", name: "imagen", widget: "image", required: false}
+      - {label: "Descripción", name: "description", widget: "markdown"}
+      - {label: "Datos/Visualización", name: "body", widget: "markdown"}
+  
+  - name: "pages"
+    label: "Páginas fijas"
+    folder: "content"
+    filter: {field: "type", value: "page"}
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Tipo", name: "type", widget: "hidden", default: "page"}
+      - {label: "Menú", name: "menu", widget: "select", options: ["main", "footer", ""], default: ""}
+      - {label: "Peso en menú", name: "weight", widget: "number", default: 10}
+      - {label: "Contenido", name: "body", widget: "markdown"}

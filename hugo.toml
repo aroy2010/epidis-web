@@ -1,0 +1,29 @@
+baseURL = 'https://epidis.net'
+languageCode = 'es'
+title = 'Adriel Olórtegui Yzú - Epidemiología y Salud Mental'
+theme = 'ananke'
+
+[params]
+  author = 'Adriel Olórtegui Yzú'
+  description = 'Epidemiología cardiovascular, salud mental e informática en salud. Docente e investigador en Perú.'
+  recent_posts_number = 5
+  show_reading_time = true
+  body_classes = 'avenir bg-near-white'
+
+[menu]
+  [[menu.main]]
+    name = 'Inicio'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = 'Publicaciones'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    name = 'Estadísticas Sanitarias'
+    url = '/estadisticas/'
+    weight = 30
+  [[menu.main]]
+    name = 'Sobre mí'
+    url = '/about/'
+    weight = 40
