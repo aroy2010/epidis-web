@@ -6,7 +6,7 @@ show_preview_links: true
 
 backend:
   name: github
-  repo: epidis-web
+  repo: aroy2010/epidis-web
   branch: main
   base_url: https://epidis.net
   auth_endpoint: /api/auth
