@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "routes": [
+    {
+      "match": "/api/auth*",
+      "include": "./api/*"
+    },
+    {
+      "match": "/api/auth/callback*",
+      "include": "./api/*"
+    }
+  ]
+}
