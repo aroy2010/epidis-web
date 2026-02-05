@@ -7,7 +7,7 @@ show_preview_links: true
 
 backend:
   name: github                    # ← CAMBIO CRÍTICO
-  repo: TU-USUARIO/tu-repo-hugo   # ← Reemplaza con tu repo real
+  repo: aroy2010/epidis-web   # ← Reemplaza con tu repo real
   branch: main                    # ← o "master" si usas eso
   base_url: https://epidis.net    # ← Tu dominio
   auth_endpoint: https://epidis.net/api/auth  # ← Cloudflare Functions
