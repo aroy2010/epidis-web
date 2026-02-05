@@ -9,7 +9,7 @@ backend:
   repo: epidis-web
   branch: main
   base_url: https://epidis.net
-  auth_endpoint: https://epidis.net/api/auth
+  auth_endpoint: /api/auth
 
 media_folder: "static/images"
 public_folder: "/images"
