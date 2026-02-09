@@ -1,29 +1,81 @@
-baseURL = 'https://epidis.net'
-languageCode = 'es'
-title = 'Adriel Olórtegui Yzú - Epidemiología y Salud Mental'
-theme = 'ananke'
+baseURL = 'https://epidis.net/'
+languageCode = 'es-PE'
+title = 'EPIDIS: Epidemiología e Informática en Salud'
+theme = 'PaperMod'
 
 [params]
-  author = 'Adriel Olórtegui Yzú'
-  description = 'Epidemiología cardiovascular, salud mental e informática en salud. Docente e investigador en Perú.'
-  recent_posts_number = 5
-  show_reading_time = true
-  body_classes = 'avenir bg-near-white'
+  author = 'Dr. Adriel Olórtegui Yzú'
+  description = 'Epidemiología e Informática aplicada a la Docencia e Investigación en Salud. Epidemiología cardiovascular, salud mental, metodología de investigación, informática biomédica y estadística aplicada.'
+  
+  # Configuración PaperMod
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  
+  # Home Info
+  [params.homeInfoParams]
+    Title = "EPIDIS"
+    Content = """
+**Epidemiología e Informática aplicada a la Docencia e Investigación en Salud**
+
+Difundiendo conocimiento sobre:
+- Epidemiología de enfermedades crónicas y cardiovasculares
+- Salud mental y salud pública
+- Metodología de investigación científica
+- Informática biomédica
+- Estadística aplicada a la salud
+
+*Docente UNMSM | Investigador INCOR-EsSalud*
+"""
+
+  # Cover image
+  [params.cover]
+    linkFullImages = true
+
+  # Social icons
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:aolorteguiyzu@unmsm.edu.pe"
 
 [menu]
   [[menu.main]]
-    name = 'Inicio'
-    url = '/'
+    identifier = "inicio"
+    name = "Inicio"
+    url = "/"
     weight = 10
+  
   [[menu.main]]
-    name = 'Publicaciones'
-    url = '/posts/'
+    identifier = "articulos"
+    name = "Artículos"
+    url = "/posts/"
     weight = 20
+  
   [[menu.main]]
-    name = 'Estadísticas Sanitarias'
-    url = '/estadisticas/'
+    identifier = "temas"
+    name = "Temas"
+    url = "/tags/"
     weight = 30
-  [[menu.main]]
-    name = 'Sobre mí'
-    url = '/about/'
-    weight = 40
+
+# Taxonomías
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Outputs
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Markup
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    noClasses = false
+    style = "monokai"
