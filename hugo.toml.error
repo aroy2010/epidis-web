@@ -1,0 +1,34 @@
+baseURL = 'https://epidis.net'
+languageCode = 'es-PE'
+title = 'Epidis: Epidemiología e Informática en Salud'
+theme = "hugo-academic-blog"
+
+[params]
+  author = 'Adriel Olórtegui Yzú'
+  description = 'Epidemiología cardiovascular, salud mental e informática en salud. Docente e investigador en Perú.'
+  
+  # Configuración académica
+  publications_type = "article"
+  projects = true
+  contact_links = true
+
+[menu]
+  [[menu.main]]
+    name = 'Inicio'
+    url = '/'
+    weight = 10
+  [[menu.publications]]
+    name = 'Artículos'
+    url = '/publication/'
+    weight = 20
+  [[menu.posts]]
+    name = 'Blog'
+    url = '/post/'
+    weight = 30
+[params]
+  assets:
+    disableFingerprinting = false
+    favicon = "/favicon.ico"
+    
+  # Fonts de Google (opcional)
+  customCSS = ["css/extended/custom.css"]
