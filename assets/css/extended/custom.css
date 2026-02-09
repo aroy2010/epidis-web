@@ -44,6 +44,7 @@
 body {
   color: var(--text-primary);
   line-height: 1.75;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
 }
 
 h1 {
@@ -82,7 +83,7 @@ h3 {
   background-color: rgba(6, 182, 212, 0.05);
 }
 
-/* --- TABLAS CIENTÍFICAS (Epidemiología) --- */
+/* --- TABLAS CIENTÍFICAS --- */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -121,11 +122,6 @@ tbody tr:hover {
   transition: background-color 0.2s;
 }
 
-/* Columnas numéricas alineadas a la derecha */
-td:nth-child(n+2) {
-  text-align: left;
-}
-
 /* --- BLOCKQUOTES METODOLÓGICOS --- */
 .post-content blockquote {
   border-left: 4px solid var(--teaching-orange);
@@ -137,12 +133,7 @@ td:nth-child(n+2) {
   border-radius: 0 4px 4px 0;
 }
 
-.dark .post-content blockquote {
-  background-color: #422006;
-  color: #fed7aa;
-}
-
-/* --- DESTACADOS PEDAGÓGICOS --- */
+/* --- DESTACADOS --- */
 .post-content strong {
   color: var(--deep-blue);
   font-weight: 600;
@@ -153,7 +144,7 @@ td:nth-child(n+2) {
   font-style: italic;
 }
 
-/* --- CÓDIGO Y SINTAXIS --- */
+/* --- CÓDIGO --- */
 code {
   background-color: #f1f5f9;
   color: var(--info-teal);
@@ -179,7 +170,7 @@ pre code {
   padding: 0;
 }
 
-/* --- TAGS/ETIQUETAS TEMÁTICAS --- */
+/* --- TAGS --- */
 .post-tag {
   background-color: var(--info-teal);
   color: #ffffff;
@@ -196,7 +187,7 @@ pre code {
   transform: translateY(-1px);
 }
 
-/* --- LISTAS ESTRUCTURADAS --- */
+/* --- LISTAS --- */
 .post-content ul,
 .post-content ol {
   margin: 1em 0;
@@ -213,7 +204,7 @@ pre code {
   font-weight: 600;
 }
 
-/* --- SEPARADORES TEMÁTICOS --- */
+/* --- SEPARADORES --- */
 hr {
   border: none;
   border-top: 2px solid #e2e8f0;
@@ -241,6 +232,15 @@ hr {
 }
 
 /* --- MODO OSCURO --- */
+.dark {
+  --research-blue: #3b82f6;
+  --deep-blue: #1e40af;
+  --info-teal: #06b6d4;
+  --teaching-orange: #fb923c;
+  --text-primary: #f1f5f9;
+  --bg-highlight: #1e3a5f;
+}
+
 .dark .header {
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
@@ -273,6 +273,11 @@ hr {
 
 .dark tbody tr:hover {
   background-color: #1e3a5f;
+}
+
+.dark .post-content blockquote {
+  background-color: #422006;
+  color: #fed7aa;
 }
 
 .dark code {
