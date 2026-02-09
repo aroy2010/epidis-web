@@ -1,0 +1,281 @@
+/* ===================================
+   EPIDIS - Paleta Científica Pedagógica
+   Epidemiología e Informática aplicada a la Docencia e Investigación en Salud
+   =================================== */
+
+:root {
+  --research-blue: #0072B2;
+  --deep-blue: #1e3a8a;
+  --info-teal: #0891b2;
+  --teaching-orange: #f97316;
+  --health-green: #059669;
+  --text-primary: #1e293b;
+  --link-color: #0072B2;
+  --bg-highlight: #dbeafe;
+}
+
+/* --- ENCABEZADO INSTITUCIONAL --- */
+.header {
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--research-blue) 100%);
+  border-bottom: 3px solid var(--info-teal);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+.menu a {
+  color: #e0f2fe !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--teaching-orange) !important;
+  transform: translateY(-1px);
+}
+
+/* --- TIPOGRAFÍA ACADÉMICA --- */
+body {
+  color: var(--text-primary);
+  line-height: 1.75;
+}
+
+h1 {
+  color: var(--deep-blue);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: var(--research-blue);
+  font-weight: 600;
+  margin-top: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+h3 {
+  color: var(--info-teal);
+  font-weight: 600;
+  margin-top: 1.2em;
+}
+
+/* --- ENLACES CIENTÍFICOS --- */
+.post-content a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--info-teal);
+  transition: all 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.post-content a:hover {
+  color: var(--info-teal);
+  border-bottom-color: var(--teaching-orange);
+  background-color: rgba(6, 182, 212, 0.05);
+}
+
+/* --- TABLAS CIENTÍFICAS (Epidemiología) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 0.95em;
+}
+
+thead {
+  background: linear-gradient(135deg, var(--research-blue) 0%, var(--info-teal) 100%);
+  color: #ffffff;
+}
+
+th {
+  padding: 14px 12px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: var(--text-primary);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+tbody tr:hover {
+  background-color: var(--bg-highlight);
+  transition: background-color 0.2s;
+}
+
+/* Columnas numéricas alineadas a la derecha */
+td:nth-child(n+2) {
+  text-align: left;
+}
+
+/* --- BLOCKQUOTES METODOLÓGICOS --- */
+.post-content blockquote {
+  border-left: 4px solid var(--teaching-orange);
+  background-color: #fff7ed;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  font-style: normal;
+  color: #78350f;
+  border-radius: 0 4px 4px 0;
+}
+
+.dark .post-content blockquote {
+  background-color: #422006;
+  color: #fed7aa;
+}
+
+/* --- DESTACADOS PEDAGÓGICOS --- */
+.post-content strong {
+  color: var(--deep-blue);
+  font-weight: 600;
+}
+
+.post-content em {
+  color: var(--research-blue);
+  font-style: italic;
+}
+
+/* --- CÓDIGO Y SINTAXIS --- */
+code {
+  background-color: #f1f5f9;
+  color: var(--info-teal);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 1.2em;
+  border-radius: 6px;
+  overflow-x: auto;
+  border-left: 4px solid var(--info-teal);
+  margin: 1.5em 0;
+}
+
+pre code {
+  background-color: transparent;
+  color: #e2e8f0;
+  padding: 0;
+}
+
+/* --- TAGS/ETIQUETAS TEMÁTICAS --- */
+.post-tag {
+  background-color: var(--info-teal);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.post-tag:hover {
+  background-color: var(--teaching-orange);
+  transform: translateY(-1px);
+}
+
+/* --- LISTAS ESTRUCTURADAS --- */
+.post-content ul,
+.post-content ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.post-content li {
+  margin: 0.5em 0;
+  line-height: 1.7;
+}
+
+.post-content li::marker {
+  color: var(--research-blue);
+  font-weight: 600;
+}
+
+/* --- SEPARADORES TEMÁTICOS --- */
+hr {
+  border: none;
+  border-top: 2px solid #e2e8f0;
+  margin: 2em 0;
+}
+
+/* --- PIE DE PÁGINA --- */
+.footer {
+  background-color: var(--deep-blue);
+  color: #cbd5e1;
+  font-size: 0.9em;
+  padding: 2em 0;
+  border-top: 3px solid var(--info-teal);
+}
+
+.footer a {
+  color: var(--teaching-orange);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.footer a:hover {
+  border-bottom-color: var(--teaching-orange);
+}
+
+/* --- MODO OSCURO --- */
+.dark .header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+.dark h1 {
+  color: #93c5fd;
+}
+
+.dark h2 {
+  color: #60a5fa;
+  border-bottom-color: #334155;
+}
+
+.dark h3 {
+  color: #22d3ee;
+}
+
+.dark table {
+  background-color: #1e293b;
+}
+
+.dark td {
+  border-bottom-color: #334155;
+  color: #e2e8f0;
+}
+
+.dark tbody tr:nth-child(even) {
+  background-color: #0f172a;
+}
+
+.dark tbody tr:hover {
+  background-color: #1e3a5f;
+}
+
+.dark code {
+  background-color: #334155;
+  color: #22d3ee;
+}
