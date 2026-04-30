@@ -1,0 +1,4 @@
+baseURL = "https://epidis.net/"
+theme = "blowfish"
+defaultContentLanguage = "es"
+title = "Epidis.net - Epidemiología, Docencia e Informática"
